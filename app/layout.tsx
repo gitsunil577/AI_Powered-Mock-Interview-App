@@ -10,6 +10,7 @@ import {
   UserButton,
 } from '@clerk/nextjs'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { ConvexClientProvider } from "./ConvexClientProvider";
 
 
 
@@ -42,8 +43,9 @@ export default function RootLayout({
       <html lang="en">
         <body className={outfit.className }>
           
-             
+          <ConvexClientProvider>
           {children}
+          </ConvexClientProvider>
         </body>
       </html>
     </ClerkProvider>
