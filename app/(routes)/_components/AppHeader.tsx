@@ -28,9 +28,9 @@ function AppHeader() {
         <h1 className="text-base font-bold md:text-2xl">AI Mock Interview</h1>
       </div>
      <div>
-        <ul>
+        <ul className='flex gap-6'>
             {MenuOption.map((option,index)=>(
-                <li className='text-lg hover:scale-105 transition-all'>{option.name}</li>
+                <li key={index} className='text-lg hover:scale-105 transition-all cursor-pointer'>{option.name}</li>
             ))}
         </ul>
      </div>
